@@ -1,0 +1,4 @@
+interface:
+  display_name: "Karpathy Coding Workflow"
+  short_description: "Plan, test, simplify, verify"
+  default_prompt: "Use $karpathy-coding-workflow to handle this code task with a clear brief, tests or verification, the simplest correct implementation, and a tight final report."
