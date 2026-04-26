@@ -74,56 +74,6 @@ Use $karpathy-coding-workflow to optimize this path. Keep a correctness harness 
 Use $karpathy-coding-workflow to review my uncommitted changes and focus on real regressions.
 ```
 
-## Make This Repo npx-Ready
-
-This repository is ready to publish as:
-
-```text
-git@github.com:alyhas/karpathy-coding-workflow-for-codex.git
-```
-
-Keep this structure:
-
-```text
-karpathy-coding-workflow-for-codex/
-  SKILL.md
-  README.md
-  agents/
-    openai.yaml
-  assets/
-    review-checklist.md
-    task-brief-template.md
-  references/
-    karpathy-derived-principles.md
-```
-
-The important requirement is that `SKILL.md` is at the repository root for a single-skill repo. The `agents/openai.yaml` file is optional metadata, but this repo includes it so Codex can show a better name, short description, and default prompt. The README intentionally documents Codex usage first; do not market this as a universal Claude/Cursor/all-agent skill unless you create separate install instructions and adapt the workflow language for those tools.
-
-Publish it:
-
-```bash
-git init
-git add .
-git commit -m "Publish Karpathy Coding Workflow skill"
-git branch -M main
-git remote add origin git@github.com:alyhas/karpathy-coding-workflow-for-codex.git
-git push -u origin main
-```
-
-Then test the install command from a clean terminal:
-
-```bash
-npx --yes skills add alyhas/karpathy-coding-workflow-for-codex --global --copy
-```
-
-Verify it appears in the global skill list:
-
-```bash
-npx --yes skills list --global
-```
-
-Use `--copy` when you want the installed files copied into the agent skill directory instead of symlinked.
-
 ## Local Development Install
 
 From this folder on Windows PowerShell:
